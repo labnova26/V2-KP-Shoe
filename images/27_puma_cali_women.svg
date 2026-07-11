@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+  <rect width="400" height="320" fill="#f8f8f8"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="295" rx="145" ry="12" fill="#00000015"/>
+  
+        <!-- Platform sneaker -->
+        <path d="M 60 195 Q 55 155 80 125 Q 120 88 200 85 Q 280 82 325 118 Q 350 148 345 195 Z" fill="#FFFFFF" stroke="#FFB6C1" stroke-width="3"/>
+        <!-- Thick platform sole -->
+        <path d="M 55 195 Q 200 210 350 195 L 352 230 Q 200 248 53 230 Z" fill="#FFB6C1"/>
+        <path d="M 53 230 Q 200 248 352 230 L 350 248 Q 200 260 55 248 Z" fill="#FFB6C1" opacity="0.6"/>
+        <!-- Laces -->
+        <line x1="115" y1="145" x2="285" y2="145" stroke="#FFB6C1" stroke-width="3" opacity="0.7"/>
+        <line x1="112" y1="160" x2="288" y2="160" stroke="#FFB6C1" stroke-width="3" opacity="0.7"/>
+        <line x1="110" y1="175" x2="290" y2="175" stroke="#FFB6C1" stroke-width="3" opacity="0.7"/>
+        
+  <!-- Brand label -->
+  <rect x="14" y="14" width="60" height="26" rx="13" fill="#CC0000"/>
+  <text x="43" y="31" font-family="Arial Black, Arial" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="1">PUMA</text>
+</svg>

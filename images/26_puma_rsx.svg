@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+  <rect width="400" height="320" fill="#f8f8f8"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="295" rx="145" ry="12" fill="#00000015"/>
+  
+        <!-- Chunky RSX -->
+        <path d="M 48 188 Q 43 143 72 110 Q 112 70 200 68 Q 288 66 330 105 Q 362 140 358 188 Z" fill="#FFFFFF" stroke="#EF4444" stroke-width="3"/>
+        <!-- Chunky layered sole -->
+        <path d="M 43 188 Q 200 208 358 188 L 360 212 Q 200 232 42 212 Z" fill="#EF4444"/>
+        <path d="M 42 212 Q 200 232 360 212 L 358 232 Q 200 248 43 232 Z" fill="#EF4444" opacity="0.7"/>
+        <path d="M 43 232 Q 200 248 358 232 L 356 248 Q 200 260 44 248 Z" fill="#EF4444" opacity="0.4"/>
+        <!-- RS cushioning pods -->
+        <ellipse cx="120" cy="222" rx="35" ry="12" fill="#EF4444" opacity="0.5"/>
+        <ellipse cx="280" cy="218" rx="35" ry="12" fill="#EF4444" opacity="0.5"/>
+        <!-- Upper details -->
+        <path d="M 85 135 Q 140 110 200 108 Q 260 106 315 130" fill="none" stroke="#EF4444" stroke-width="2" opacity="0.5"/>
+        <line x1="115" y1="148" x2="285" y2="148" stroke="#EF4444" stroke-width="3.5"/>
+        <line x1="110" y1="163" x2="290" y2="163" stroke="#EF4444" stroke-width="3.5"/>
+        
+  <!-- Brand label -->
+  <rect x="14" y="14" width="60" height="26" rx="13" fill="#CC0000"/>
+  <text x="43" y="31" font-family="Arial Black, Arial" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="1">PUMA</text>
+</svg>

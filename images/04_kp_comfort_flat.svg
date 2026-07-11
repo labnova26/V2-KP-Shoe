@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+  <rect width="400" height="320" fill="#f8f8f8"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="295" rx="145" ry="12" fill="#00000015"/>
+  
+        <!-- Ballet flat -->
+        <path d="M 55 205 Q 50 175 75 150 Q 120 115 210 110 Q 290 108 330 140 Q 350 165 345 205 Z" fill="#FFFFFF" stroke="#FFB6C1" stroke-width="3"/>
+        <!-- Very thin sole -->
+        <path d="M 55 205 Q 200 218 345 205 Q 345 215 200 218 Q 55 215 55 205 Z" fill="#FFB6C1"/>
+        <!-- Toe shape - round -->
+        <ellipse cx="330" cy="200" rx="18" ry="12" fill="#FFB6C1" opacity="0.35"/>
+        <!-- Bow detail -->
+        <path d="M 175 140 Q 185 130 200 140 Q 215 130 225 140 Q 215 150 200 140 Q 185 150 175 140 Z" fill="#FFB6C1" opacity="0.8"/>
+        <circle cx="200" cy="140" r="5" fill="#FFB6C1"/>
+        
+  <!-- Brand label -->
+  <rect x="14" y="14" width="60" height="26" rx="13" fill="#C8A951"/>
+  <text x="43" y="31" font-family="Arial Black, Arial" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="1">KP</text>
+</svg>
