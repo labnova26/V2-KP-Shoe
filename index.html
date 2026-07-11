@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KP Production – Shoe Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───────── NAVBAR ───────── -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo">KP<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#queue">Order Tracking</a>
+      <a href="#departments">Categories</a>
+      <a href="#notifications">Notifications</a>
+      <a href="#emergency">New Arrivals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="toggleCart()">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="account-btn" onclick="showSection('account')">My Account</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- ───────── HERO / HOME ───────── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">Jwaneng, Botswana</p>
+      <h1 class="hero-title">STEP INTO<br/><span class="accent">YOUR WORLD</span></h1>
+      <p class="hero-sub">Premium footwear curated by KP Production. Every pair tells a story — find yours.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn-primary">Shop Now</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="shoe-card-big">
+        <div class="shoe-emoji">👟</div>
+        <div class="shoe-label">New Drop</div>
+        <div class="shoe-name">KP Air Classic</div>
+        <div class="shoe-price">P 899</div>
+      </div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <span>KP PRODUCTION &nbsp;•&nbsp; PREMIUM FOOTWEAR &nbsp;•&nbsp; JWANENG &nbsp;•&nbsp; BOTSWANA &nbsp;•&nbsp; NEW ARRIVALS &nbsp;•&nbsp; FREE DELIVERY &nbsp;•&nbsp;</span>
+        <span>KP PRODUCTION &nbsp;•&nbsp; PREMIUM FOOTWEAR &nbsp;•&nbsp; JWANENG &nbsp;•&nbsp; BOTSWANA &nbsp;•&nbsp; NEW ARRIVALS &nbsp;•&nbsp; FREE DELIVERY &nbsp;•&nbsp;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── ABOUT ───────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-eyebrow">Who We Are</p>
+      <h2 class="section-title">About KP Production</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>KP Production is a Botswana-based footwear brand committed to bringing quality shoes to every customer's doorstep. Based in Jwaneng, we serve the nation with carefully selected styles that blend comfort, durability, and fashion.</p>
+          <p>We believe that great shoes shouldn't be out of reach. Whether you're stepping into the office, hitting the streets, or dressing for a special occasion — KP Production has the pair for you.</p>
+          <div class="stats-row">
+            <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Products</span></div>
+            <div class="stat"><span class="stat-num">1K+</span><span class="stat-label">Happy Customers</span></div>
+            <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Quality Assured</span></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="about-icon">📦</div>
+            <h3>Fast Delivery</h3>
+            <p>We deliver across Botswana promptly and safely.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">✅</div>
+            <h3>Quality Guaranteed</h3>
+            <p>Every shoe is quality-checked before it reaches you.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">💬</div>
+            <h3>Customer Support</h3>
+            <p>Reach us anytime via call, email or WhatsApp.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🔁</div>
+            <h3>Easy Returns</h3>
+            <p>Not satisfied? We'll sort it out, no questions asked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SHOP ───────── -->
+  <section class="section dark-section" id="shop">
+    <div class="container">
+      <p class="section-eyebrow light">Browse</p>
+      <h2 class="section-title light">Shop All Shoes</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProducts('mens', this)">Men's</button>
+        <button class="filter-btn" onclick="filterProducts('womens', this)">Women's</button>
+        <button class="filter-btn" onclick="filterProducts('kids', this)">Kids'</button>
+        <button class="filter-btn" onclick="filterProducts('sneakers', this)">Sneakers</button>
+        <button class="filter-btn" onclick="filterProducts('formal', this)">Formal</button>
+        <button class="filter-btn" onclick="filterProducts('sale', this)">Sale</button>
+      </div>
+      <div class="filter-bar brand-bar">
+        <span class="brand-label">Brand:</span>
+        <button class="filter-btn brand-btn active" onclick="filterBrand('all', this)">All Brands</button>
+        <button class="filter-btn brand-btn nike-btn" onclick="filterBrand('Nike', this)">Nike</button>
+        <button class="filter-btn brand-btn adidas-btn" onclick="filterBrand('Adidas', this)">Adidas</button>
+        <button class="filter-btn brand-btn puma-btn" onclick="filterBrand('Puma', this)">Puma</button>
+        <button class="filter-btn brand-btn" onclick="filterBrand('KP Production', this)">KP Production</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ───────── PRODUCT DETAIL MODAL ───────── -->
+  <div class="modal-overlay" id="productModal" onclick="closeModal(event)">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" onclick="closeProductModal()">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ───────── CART SIDEBAR ───────── -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is empty.</p></div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">Total: <strong id="cartTotal">P 0</strong></div>
+      <button class="btn-primary full" onclick="proceedCheckout()">Checkout</button>
+    </div>
+  </div>
+
+  <!-- ───────── CHECKOUT MODAL ───────── -->
+  <div class="modal-overlay" id="checkoutModal" onclick="closeCheckout(event)">
+    <div class="modal-box wide" id="checkoutBox">
+      <button class="modal-close" onclick="document.getElementById('checkoutModal').classList.remove('active')">✕</button>
+      <h2 style="margin-bottom:1.5rem">Checkout</h2>
+      <div id="checkoutContent"></div>
+    </div>
+  </div>
+
+  <!-- ───────── ORDER TRACKING ───────── -->
+  <section class="section" id="queue">
+    <div class="container">
+      <p class="section-eyebrow">Track</p>
+      <h2 class="section-title">Order Tracking</h2>
+      <div class="tracking-wrap">
+        <div class="tracking-form">
+          <label>Enter your Order ID</label>
+          <div class="tracking-input-row">
+            <input type="text" id="trackingInput" placeholder="e.g. KP-20240710-001" />
+            <button class="btn-primary" onclick="trackOrder()">Track</button>
+          </div>
+          <div class="tracking-result" id="trackingResult"></div>
+        </div>
+        <div class="live-queue">
+          <h3>Live Queue Status</h3>
+          <div class="queue-items" id="queueItems"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── DEPARTMENTS / CATEGORIES ───────── -->
+  <section class="section dark-section" id="departments">
+    <div class="container">
+      <p class="section-eyebrow light">Browse By</p>
+      <h2 class="section-title light">Shoe Categories</h2>
+      <div class="dept-grid">
+        <div class="dept-card" onclick="filterAndGo('mens')">
+          <div class="dept-icon">👞</div>
+          <h3>Men's Shoes</h3>
+          <p>Loafers, Oxfords, Boots & more</p>
+          <span class="dept-link">Shop →</span>
+        </div>
+        <div class="dept-card" onclick="filterAndGo('womens')">
+          <div class="dept-icon">👠</div>
+          <h3>Women's Shoes</h3>
+          <p>Heels, Flats, Sandals & more</p>
+          <span class="dept-link">Shop →</span>
+        </div>
+        <div class="dept-card" onclick="filterAndGo('kids')">
+          <div class="dept-icon">👟</div>
+          <h3>Kids' Shoes</h3>
+          <p>Comfortable & durable for growing feet</p>
+          <span class="dept-link">Shop →</span>
+        </div>
+        <div class="dept-card" onclick="filterAndGo('sneakers')">
+          <div class="dept-icon">🥿</div>
+          <h3>Sneakers</h3>
+          <p>Streetwear, Sport & Casual</p>
+          <span class="dept-link">Shop →</span>
+        </div>
+        <div class="dept-card" onclick="filterAndGo('formal')">
+          <div class="dept-icon">🥾</div>
+          <h3>Formal Shoes</h3>
+          <p>Office-ready elegance</p>
+          <span class="dept-link">Shop →</span>
+        </div>
+        <div class="dept-card" onclick="filterAndGo('sale')">
+          <div class="dept-icon">🏷️</div>
+          <h3>Sale / Clearance</h3>
+          <p>Big deals on great styles</p>
+          <span class="dept-link">Shop →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── MY ACCOUNT ───────── -->
+  <section class="section" id="account">
+    <div class="container">
+      <p class="section-eyebrow">Personal</p>
+      <h2 class="section-title">My Account</h2>
+      <div class="account-wrap" id="accountWrap">
+        <!-- Login / Register tabs -->
+        <div class="auth-box" id="authBox">
+          <div class="auth-tabs">
+            <button class="auth-tab active" onclick="switchTab('login')">Login</button>
+            <button class="auth-tab" onclick="switchTab('register')">Register</button>
+          </div>
+          <div id="loginForm">
+            <input type="email" placeholder="Email address" class="form-input" id="loginEmail"/>
+            <input type="password" placeholder="Password" class="form-input" id="loginPass"/>
+            <button class="btn-primary full" onclick="loginUser()">Login</button>
+          </div>
+          <div id="registerForm" style="display:none">
+            <input type="text" placeholder="Full Name" class="form-input" id="regName"/>
+            <input type="email" placeholder="Email address" class="form-input" id="regEmail"/>
+            <input type="tel" placeholder="Phone number" class="form-input" id="regPhone"/>
+            <input type="password" placeholder="Password" class="form-input" id="regPass"/>
+            <button class="btn-primary full" onclick="registerUser()">Create Account</button>
+          </div>
+          <p class="form-msg" id="authMsg"></p>
+        </div>
+        <div class="dashboard" id="dashboard" style="display:none">
+          <div class="dash-header">
+            <h3>Welcome, <span id="dashName"></span> 👋</h3>
+            <button class="btn-ghost small" onclick="logoutUser()">Logout</button>
+          </div>
+          <div class="dash-tabs">
+            <button class="dash-tab active" onclick="showDash('profile')">Profile</button>
+            <button class="dash-tab" onclick="showDash('orders')">Order History</button>
+            <button class="dash-tab" onclick="showDash('wishlist')">Wishlist</button>
+          </div>
+          <div id="dashProfile" class="dash-panel">
+            <p><strong>Name:</strong> <span id="profileName"></span></p>
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+          </div>
+          <div id="dashOrders" class="dash-panel" style="display:none">
+            <div id="orderHistoryList"></div>
+          </div>
+          <div id="dashWishlist" class="dash-panel" style="display:none">
+            <div id="wishlistItems"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── NOTIFICATIONS ───────── -->
+  <section class="section dark-section" id="notifications">
+    <div class="container">
+      <p class="section-eyebrow light">Stay Updated</p>
+      <h2 class="section-title light">Notifications</h2>
+      <div class="notif-wrap">
+        <div class="notif-list" id="notifList"></div>
+        <div class="notif-subscribe">
+          <h3>Subscribe for Alerts</h3>
+          <p>Get notified about new arrivals, deals and your order updates.</p>
+          <input type="email" placeholder="Your email address" class="form-input" id="notifEmail"/>
+          <button class="btn-primary full" onclick="subscribeNotif()">Subscribe</button>
+          <p class="form-msg" id="notifMsg"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── NEW ARRIVALS / EMERGENCY ───────── -->
+  <section class="section" id="emergency">
+    <div class="container">
+      <p class="section-eyebrow">Just Dropped</p>
+      <h2 class="section-title">New Arrivals</h2>
+      <p class="section-desc">Fresh styles added this week. Limited stock — grab yours before they're gone.</p>
+      <div class="arrivals-grid" id="arrivalsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ───────── CONTACT ───────── -->
+  <section class="section dark-section" id="contact">
+    <div class="container">
+      <p class="section-eyebrow light">Get In Touch</p>
+      <h2 class="section-title light">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>Plot 1023 EU 7, Jwaneng, Botswana</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <p><a href="tel:+26771655977">+267 71 655 977</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:saleskpproductions@gmail.com">saleskpproductions@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon – Sat: 8:00 AM – 6:00 PM<br/>Sun: 10:00 AM – 3:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <h3>Send a Message</h3>
+          <input type="text" placeholder="Your Name" class="form-input" id="cName"/>
+          <input type="email" placeholder="Your Email" class="form-input" id="cEmail"/>
+          <input type="text" placeholder="Subject" class="form-input" id="cSubject"/>
+          <textarea placeholder="Your message..." class="form-input" rows="4" id="cMessage"></textarea>
+          <button class="btn-primary full" onclick="sendMessage()">Send Message</button>
+          <p class="form-msg" id="contactMsg"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">KP<span>.</span></div>
+        <p>Premium footwear from the heart of Botswana.</p>
+        <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.5">Plot 1023 EU 7, Jwaneng, Botswana</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <a href="#departments">Men's Shoes</a>
+        <a href="#departments">Women's Shoes</a>
+        <a href="#departments">Kids' Shoes</a>
+        <a href="#departments">Sale</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:+26771655977">+267 71 655 977</a>
+        <a href="mailto:saleskpproductions@gmail.com">saleskpproductions@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 KP Production. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
